@@ -4,7 +4,6 @@ from panda3d.core import *
 from direct.task import Task
 from direct.gui.DirectGui import *
 
-
 class SpaceJam(ShowBase):
     def __init__(self):
         ShowBase.__init__(self)
@@ -48,10 +47,12 @@ class SpaceJam(ShowBase):
         self.station2 = SpaceJam.addAdditionalModel(
             self,   "./Assets/station/spaceStation.x", 6, 610.0,472.0,40.0,      
             "./Assets/station/SpaceStation1_Dif2.png",0,90,0)
+        
         # self.stationtest = SpaceJam.addAdditionalModel(
         #     self,   "./Assets/station/spaceStation.x", 0.2,0.0,20.0,0.0,       
         # "./Assets/station/SpaceStation1_Dif2.png",0,90,0)
         #was used to test yaw and rotation to get a "correct orientation station" 
+        
         self.ship1 = SpaceJam.addAdditionalModel(
             self,   "./Assets/blorg/theBorg.x",     1,558,557,29,                 
             "./Assets/blorg/small_space_ship_2_color.jpg",10,90,20)
@@ -67,7 +68,6 @@ class SpaceJam(ShowBase):
         self.ship5 = SpaceJam.addAdditionalModel(
             self,   "./Assets/blorg/theBorg.x",     0.7,0,70,8,                 
             "./Assets/blorg/small_space_ship_2_color.jpg",0,90,30)
-        #i wanted to add more spaceships to add a bit of a feel like it's lively
     def addAdditionalModel(self,ModelFile,scale,CoordX,CoordY,CoordZ,TextureFile,Yaw,Pitch,Rotation):
         new_obj = self.loader.loadModel(ModelFile) 
         new_obj.setScale(scale)
